@@ -70,6 +70,9 @@ Application::Application(const std::string               &aInterfaceName,
 #if OTBR_ENABLE_BACKBONE_ROUTER
     , mBackboneAgent(mNcp, aInterfaceName, mBackboneInterfaceName)
 #endif
+#if OTBR_ENABLE_DNSSD_PLAT
+    , mDnssdPlatform(mNcp, *mPublisher)
+#endif
 #if OTBR_ENABLE_SRP_ADVERTISING_PROXY
     , mAdvertisingProxy(mNcp, *mPublisher)
 #endif
@@ -115,6 +118,9 @@ void Application::Init(void)
 #if OTBR_ENABLE_BACKBONE_ROUTER
     mBackboneAgent.Init();
 #endif
+#if OTBR_ENABLE_DNSSD_PLAT
+    mDnssdPlatform.Start();
+#endif
 #if OTBR_ENABLE_SRP_ADVERTISING_PROXY
     mAdvertisingProxy.SetEnabled(true);
 #endif
@@ -137,6 +143,9 @@ void Application::Init(void)
 
 void Application::Deinit(void)
 {
+#if OTBR_ENABLE_DNSSD_PLAT
+    mDnssdPlatform.Stop();
+#endif
 #if OTBR_ENABLE_SRP_ADVERTISING_PROXY
     mAdvertisingProxy.SetEnabled(false);
 #endif
@@ -232,6 +241,9 @@ void Application::HandleMdnsState(Mdns::Publisher::State aState)
 {
     OTBR_UNUSED_VARIABLE(aState);
 
+#if OTBR_ENABLE_DNSSD_PLAT
+    mDnssdPlatform.HandleMdnsPublisherStateChange(aState);
+#endif
 #if OTBR_ENABLE_BORDER_AGENT
     mBorderAgent.HandleMdnsState(aState);
 #endif
