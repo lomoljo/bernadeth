@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keyregistration_1041',['KeyRegistration',['../d5/d0c/classotbr_1_1Mdns_1_1Publisher_1_1KeyRegistration.html',1,'otbr::Mdns::Publisher']]]
+  ['keyregistration_1044',['KeyRegistration',['../d5/d0c/classotbr_1_1Mdns_1_1Publisher_1_1KeyRegistration.html',1,'otbr::Mdns::Publisher']]]
 ];
