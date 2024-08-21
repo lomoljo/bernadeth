@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.3.0-791828c</span>
+   &#160;<span id="projectnumber">0.3.0-861ddf2</span>
    </div>
   </td>
  </tr>
@@ -88,6 +88,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5acddf4a65bb228ea4bd43d53dd24bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae465aba60678c6bb8e38a2b98629671a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#ae465aba60678c6bb8e38a2b98629671a">DatasetSetActiveTlvs</a> (const otOperationalDatasetTlvs &amp;aActiveOpDatasetTlvs, AsyncTaskPtr aAsyncTask)</td></tr>
 <tr class="separator:ae465aba60678c6bb8e38a2b98629671a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1c16a22f4e0e2fb725455c98e02eaf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#af1c16a22f4e0e2fb725455c98e02eaf5">DatasetMgmtSetPending</a> (std::shared_ptr&lt; otOperationalDatasetTlvs &gt; aPendingOpDatasetTlvsPtr, AsyncTaskPtr aAsyncTask)</td></tr>
+<tr class="separator:af1c16a22f4e0e2fb725455c98e02eaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5552a680bafcd37905a2c47ac2cb7e50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#a5552a680bafcd37905a2c47ac2cb7e50">Ip6SetEnabled</a> (bool aEnable, AsyncTaskPtr aAsyncTask)</td></tr>
 <tr class="separator:a5552a680bafcd37905a2c47ac2cb7e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3b6e5f0379780bf9754b0193d262ed8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#af3b6e5f0379780bf9754b0193d262ed8">ThreadSetEnabled</a> (bool aEnable, AsyncTaskPtr aAsyncTask)</td></tr>
@@ -120,6 +122,43 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="af1c16a22f4e0e2fb725455c98e02eaf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1c16a22f4e0e2fb725455c98e02eaf5">&#9670;&nbsp;</a></span>DatasetMgmtSetPending()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otbr::Ncp::NcpSpinel::DatasetMgmtSetPending </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; otOperationalDatasetTlvs &gt;&#160;</td>
+          <td class="paramname"><em>aPendingOpDatasetTlvsPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AsyncTaskPtr&#160;</td>
+          <td class="paramname"><em>aAsyncTask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This method instructs the NCP to send a MGMT_SET to set Thread Pending Operational Dataset.</p>
+<p>If this method is called again before the previous call completed, no action will be taken. The new receiver <code>aAsyncTask</code> will be set a result OT_ERROR_BUSY.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aPendingOpDatasetTlvsPtr</td><td>A shared pointer to the pending operational dataset of the Thread network. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aAsyncTask</td><td>A pointer to an async result to receive the result of this operation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae465aba60678c6bb8e38a2b98629671a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae465aba60678c6bb8e38a2b98629671a">&#9670;&nbsp;</a></span>DatasetSetActiveTlvs()</h2>
 
