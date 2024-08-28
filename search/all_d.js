@@ -17,10 +17,11 @@ var searchData=
   ['neighborinfo_595',['NeighborInfo',['../d2/d47/structotbr_1_1DBus_1_1NeighborInfo.html',1,'otbr::DBus']]],
   ['netif_596',['Netif',['../d3/d72/classotbr_1_1Netif.html',1,'otbr']]],
   ['netif_2ehpp_597',['netif.hpp',['../d0/d86/netif_8hpp.html',1,'']]],
-  ['networkproperties_598',['NetworkProperties',['../d6/d75/classotbr_1_1Ncp_1_1NetworkProperties.html',1,'otbr::Ncp']]],
-  ['newinstance_599',['newInstance',['../d5/d8a/classotbr_1_1vendor_1_1VendorServer.html#ad9fda081680824f22fd689743c201010',1,'otbr::vendor::VendorServer']]],
-  ['node2jsonstring_600',['Node2JsonString',['../d0/d6c/namespaceotbr_1_1rest_1_1Json.html#a6804dde5c7c67da91efeec9fba9c905f',1,'otbr::rest::Json']]],
-  ['nodeinfo_601',['NodeInfo',['../d6/dbf/structotbr_1_1rest_1_1NodeInfo.html',1,'otbr::rest']]],
-  ['noncopyable_602',['NonCopyable',['../dc/d3c/classNonCopyable.html',1,'']]],
-  ['number2jsonstring_603',['Number2JsonString',['../d0/d6c/namespaceotbr_1_1rest_1_1Json.html#a8ca8f1684dd72a37a098f9ea2a2f662f',1,'otbr::rest::Json']]]
+  ['netifsetstatechangedcallback_598',['NetifSetStateChangedCallback',['../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#a706456328269ca63d5532cc4ee6c434c',1,'otbr::Ncp::NcpSpinel']]],
+  ['networkproperties_599',['NetworkProperties',['../d6/d75/classotbr_1_1Ncp_1_1NetworkProperties.html',1,'otbr::Ncp']]],
+  ['newinstance_600',['newInstance',['../d5/d8a/classotbr_1_1vendor_1_1VendorServer.html#ad9fda081680824f22fd689743c201010',1,'otbr::vendor::VendorServer']]],
+  ['node2jsonstring_601',['Node2JsonString',['../d0/d6c/namespaceotbr_1_1rest_1_1Json.html#a6804dde5c7c67da91efeec9fba9c905f',1,'otbr::rest::Json']]],
+  ['nodeinfo_602',['NodeInfo',['../d6/dbf/structotbr_1_1rest_1_1NodeInfo.html',1,'otbr::rest']]],
+  ['noncopyable_603',['NonCopyable',['../dc/d3c/classNonCopyable.html',1,'']]],
+  ['number2jsonstring_604',['Number2JsonString',['../d0/d6c/namespaceotbr_1_1rest_1_1Json.html#a8ca8f1684dd72a37a098f9ea2a2f662f',1,'otbr::rest::Json']]]
 ];

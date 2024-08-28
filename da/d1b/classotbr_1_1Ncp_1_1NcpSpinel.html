@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.3.0-5444cfd</span>
+   &#160;<span id="projectnumber">0.3.0-9ec7d63</span>
    </div>
   </td>
  </tr>
@@ -82,6 +82,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:a27cdeab0ecd221e48a57fdda3819f0bb"><td class="memItemLeft" align="right" valign="top"><a id="a27cdeab0ecd221e48a57fdda3819f0bb"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Ip6AddressTableCallback</b> = std::function&lt; void(const std::vector&lt; <a class="el" href="../../dd/d58/classotbr_1_1Ip6AddressInfo.html">Ip6AddressInfo</a> &gt; &amp;)&gt;</td></tr>
 <tr class="separator:a27cdeab0ecd221e48a57fdda3819f0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af689d30338d74153b6da642e68a504d3"><td class="memItemLeft" align="right" valign="top"><a id="af689d30338d74153b6da642e68a504d3"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>NetifStateChangedCallback</b> = std::function&lt; void(bool)&gt;</td></tr>
+<tr class="separator:af689d30338d74153b6da642e68a504d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -107,6 +110,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac2399b0d6b98ef35766af549201a9fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf4ab7e9fab26afc8933d87821177071"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#adf4ab7e9fab26afc8933d87821177071">ThreadErasePersistentInfo</a> (AsyncTaskPtr aAsyncTask)</td></tr>
 <tr class="separator:adf4ab7e9fab26afc8933d87821177071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a706456328269ca63d5532cc4ee6c434c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#a706456328269ca63d5532cc4ee6c434c">NetifSetStateChangedCallback</a> (const NetifStateChangedCallback &amp;aCallback)</td></tr>
+<tr class="separator:a706456328269ca63d5532cc4ee6c434c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The class provides methods for controlling the Thread stack on the network co-processor (NCP). </p>
@@ -352,6 +357,39 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aEnable</td><td>TRUE to enable and FALSE to disable. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">aAsyncTask</td><td>A pointer to an async result to receive the result of this operation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a706456328269ca63d5532cc4ee6c434c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a706456328269ca63d5532cc4ee6c434c">&#9670;&nbsp;</a></span>NetifSetStateChangedCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otbr::Ncp::NcpSpinel::NetifSetStateChangedCallback </td>
+          <td>(</td>
+          <td class="paramtype">const NetifStateChangedCallback &amp;&#160;</td>
+          <td class="paramname"><em>aCallback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method sets the callback invoked when the network interface state changes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aCallback</td><td>The callback invoked when the network interface state changes. </td></tr>
   </table>
   </dd>
 </dl>
