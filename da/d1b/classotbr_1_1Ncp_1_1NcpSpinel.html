@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.3.0-5ff6ef7</span>
+   &#160;<span id="projectnumber">0.3.0-180e27b</span>
    </div>
   </td>
  </tr>
@@ -82,6 +82,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:a27cdeab0ecd221e48a57fdda3819f0bb"><td class="memItemLeft" align="right" valign="top"><a id="a27cdeab0ecd221e48a57fdda3819f0bb"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Ip6AddressTableCallback</b> = std::function&lt; void(const std::vector&lt; <a class="el" href="../../dd/d58/classotbr_1_1Ip6AddressInfo.html">Ip6AddressInfo</a> &gt; &amp;)&gt;</td></tr>
 <tr class="separator:a27cdeab0ecd221e48a57fdda3819f0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b9ee84b5980792fa22119d8a336d5a"><td class="memItemLeft" align="right" valign="top"><a id="af0b9ee84b5980792fa22119d8a336d5a"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Ip6MulticastAddressTableCallback</b> = std::function&lt; void(const std::vector&lt; <a class="el" href="../../d2/dfe/classotbr_1_1Ip6Address.html">Ip6Address</a> &gt; &amp;)&gt;</td></tr>
+<tr class="separator:af0b9ee84b5980792fa22119d8a336d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af689d30338d74153b6da642e68a504d3"><td class="memItemLeft" align="right" valign="top"><a id="af689d30338d74153b6da642e68a504d3"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>NetifStateChangedCallback</b> = std::function&lt; void(bool)&gt;</td></tr>
 <tr class="separator:af689d30338d74153b6da642e68a504d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,6 +107,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5552a680bafcd37905a2c47ac2cb7e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9adba505196d1391551fe631e4b404cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#a9adba505196d1391551fe631e4b404cb">Ip6SetAddressCallback</a> (const Ip6AddressTableCallback &amp;aCallback)</td></tr>
 <tr class="separator:a9adba505196d1391551fe631e4b404cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765ff33f16c94fd9c5979eed65604872"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#a765ff33f16c94fd9c5979eed65604872">Ip6SetAddressMulticastCallback</a> (const Ip6MulticastAddressTableCallback &amp;aCallback)</td></tr>
+<tr class="separator:a765ff33f16c94fd9c5979eed65604872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3b6e5f0379780bf9754b0193d262ed8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#af3b6e5f0379780bf9754b0193d262ed8">ThreadSetEnabled</a> (bool aEnable, AsyncTaskPtr aAsyncTask)</td></tr>
 <tr class="separator:af3b6e5f0379780bf9754b0193d262ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2399b0d6b98ef35766af549201a9fff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#ac2399b0d6b98ef35766af549201a9fff">ThreadDetachGracefully</a> (AsyncTaskPtr aAsyncTask)</td></tr>
@@ -323,6 +328,40 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a765ff33f16c94fd9c5979eed65604872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765ff33f16c94fd9c5979eed65604872">&#9670;&nbsp;</a></span>Ip6SetAddressMulticastCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otbr::Ncp::NcpSpinel::Ip6SetAddressMulticastCallback </td>
+          <td>(</td>
+          <td class="paramtype">const Ip6MulticastAddressTableCallback &amp;&#160;</td>
+          <td class="paramname"><em>aCallback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method sets the callback to receive the IPv6 multicast address table from the NCP.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aCallback</td><td>The callback to handle the IPv6 address table.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The callback will be invoked when receiving an IPv6 multicast address table from the NCP. When the callback is invoked, the callback MUST copy the otIp6Address objects and maintain it if it's not used immediately (within the callback). </p>
 
 </div>
 </div>
