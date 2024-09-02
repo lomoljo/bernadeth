@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">openthread-br
-   &#160;<span id="projectnumber">0.3.0-2a85a7b</span>
+   &#160;<span id="projectnumber">0.3.0-3874d96</span>
    </div>
   </td>
  </tr>
@@ -109,6 +109,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9adba505196d1391551fe631e4b404cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a765ff33f16c94fd9c5979eed65604872"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#a765ff33f16c94fd9c5979eed65604872">Ip6SetAddressMulticastCallback</a> (const Ip6MulticastAddressTableCallback &amp;aCallback)</td></tr>
 <tr class="separator:a765ff33f16c94fd9c5979eed65604872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68cacbddddeebc6c9ed1a4e7d7515fd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aa">otbrError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#a68cacbddddeebc6c9ed1a4e7d7515fd5">Ip6Send</a> (const uint8_t *aData, uint16_t aLength)</td></tr>
+<tr class="separator:a68cacbddddeebc6c9ed1a4e7d7515fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3b6e5f0379780bf9754b0193d262ed8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#af3b6e5f0379780bf9754b0193d262ed8">ThreadSetEnabled</a> (bool aEnable, AsyncTaskPtr aAsyncTask)</td></tr>
 <tr class="separator:af3b6e5f0379780bf9754b0193d262ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2399b0d6b98ef35766af549201a9fff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html#ac2399b0d6b98ef35766af549201a9fff">ThreadDetachGracefully</a> (AsyncTaskPtr aAsyncTask)</td></tr>
@@ -291,6 +293,49 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">aSpinelDriver</td><td>A reference to the SpinelDriver instance that this object depends. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">aObserver</td><td>A reference to the Network properties observer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a68cacbddddeebc6c9ed1a4e7d7515fd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68cacbddddeebc6c9ed1a4e7d7515fd5">&#9670;&nbsp;</a></span>Ip6Send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d53/common_2types_8hpp.html#a9addd74a14dca1dab1b3e7a8205455aa">otbrError</a> otbr::Ncp::NcpSpinel::Ip6Send </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>aData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>aLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This methods sends an IP6 datagram through the NCP.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">aData</td><td>A pointer to the beginning of the IP6 datagram. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aLength</td><td>The length of the datagram.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">OTBR_ERROR_NONE</td><td>The datagram is sent to NCP successfully. </td></tr>
+    <tr><td class="paramname">OTBR_ERROR_BUSY</td><td><a class="el" href="../../da/d1b/classotbr_1_1Ncp_1_1NcpSpinel.html">NcpSpinel</a> is busy with other requests. </td></tr>
   </table>
   </dd>
 </dl>
