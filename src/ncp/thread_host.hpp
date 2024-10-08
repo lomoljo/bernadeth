@@ -170,6 +170,8 @@ public:
 
 protected:
     static otLogLevel ConvertToOtLogLevel(otbrLogLevel aLevel);
+
+    static CoprocessorType InitCoprocessor(const std::vector<const char *> &aRadioUrls);
 };
 
 } // namespace Ncp
