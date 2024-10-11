@@ -66,8 +66,13 @@ public:
     void      Init(void);
     void      Deinit(void);
     otbrError SetInfraIf(const char *aIfName);
+    otbrError SendIcmp6Nd(uint32_t            aInfraIfIndex,
+                          const otIp6Address &aDestAddress,
+                          const uint8_t      *aBuffer,
+                          uint16_t            aBufferLength);
 
 private:
+    static int              CreateIcmp6Socket(const char *aInfraIfName);
     bool                    IsRunning(const std::vector<Ip6Address> &aAddrs) const;
     short                   GetFlags(void) const;
     std::vector<Ip6Address> GetAddresses(void);
@@ -76,6 +81,7 @@ private:
     Dependencies &mDeps;
     char          mInfraIfName[IFNAMSIZ];
     unsigned int  mInfraIfIndex;
+    int           mInfraIfIcmp6Socket;
 };
 
 } // namespace otbr
