@@ -64,4 +64,4 @@ jobs:
     - name: Run
       run: OTBR_VERBOSE=1 OTBR_TOP_BUILDDIR="./build/temp" script/test ncp_mode
     - name: Codecov
-      uses: codecov/codecov-action@v4
+      uses: codecov/codecov-action@v5
